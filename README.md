@@ -17,7 +17,7 @@ Em ambas as requisições (<b>POST</b> e <b>GET</b>) o aplicativo enviará no <b
 O Web Service pode ser disponibilizado em uma rede local ou na internet, sendo que os dados do mesmo devem ser configurados no cadastro de "Parâmetros" no aplicativo <b>Representante Mobile</b>.
 
 > Configuração do Web Service:
-* IP/Host: Obrigatório. Exemplo: http://192.168.0.1, http://<nomedaempresa>.no-ip.org, http://www.nomedaempresa.com.br
+* IP/Host: Obrigatório. Exemplo: http://192.168.0.1, http://nomedaempresa.no-ip.org, http://www.nomedaempresa.com.br
 * Porta: Não obrigatório. Exemplo: 3030
 * Contexto: Obrigatório. Exemplo: ws
 
