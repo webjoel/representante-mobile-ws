@@ -8,45 +8,45 @@ app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
     
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Cache-Control, Pragma, Expires');
+    	res.setHeader('Access-Control-Allow-Origin', '*');
+    	res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Cache-Control, Pragma, Expires');
 
-    next();
+    	next();
 });
 
 function autenticacao(req, res, next) {
 
-    // VALIDA ACESSO
+    	// VALIDA ACESSO
     
-    // TODO CRIAR UMA SENHA
+    	// TODO CRIAR UMA SENHA
     
-    var senha = 'teste';
+    	var senha = 'teste';
     
 	if (req.headers.senha && new Buffer(req.headers.senha, 'base64').toString('utf8') === senha) {
 
 		next();
 	} else {
-        res.status(200).send('Acesso ao servidor não autorizado.');
+        	res.status(200).send('Acesso ao servidor não autorizado.');
 	}
 }
 
 app.post('/ws', autenticacao, function (req, res) {
     
-    // SINCRONIZA PEDIDOS
+    	// SINCRONIZA PEDIDOS
     
-    // TODO INSERIR EM UMA BASE DE DADOS
+    	// TODO INSERIR EM UMA BASE DE DADOS
     
-    console.log(req.body); //
+    	console.log(req.body);
 
 	res.status(200).send('OK');
 });
 
 app.get('/ws', autenticacao, function (req, res) {
     
-    // SINCRONIZA CADASTROS
+    	// SINCRONIZA CADASTROS
 
-    // TODO RECUPERAR DE UMA BASE DE DADOS
+    	// TODO RECUPERAR DE UMA BASE DE DADOS
     
 	var result = JSON.parse('{ "clientes" : [ '
                             + '{"identificador":"1","nome":"Cliente Teste","cnpj":"01.234.456/0001-23","telefone":"(00)0000-0000","contato":"Contato 1","email":"teste@teste.com","logradouro":"Rua Geral","numero":"1","bairro":"Centro","cidade":"Pequenópolis","estado":"DF","tipo":"Especial","limite":1000,"venda":0,"valor_titulos_vencidos":0,"quantidade_titulos_vencidos":0} ],'
