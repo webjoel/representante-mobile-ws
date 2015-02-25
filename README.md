@@ -19,3 +19,14 @@ O Web Service pode ser disponibilizado em uma rede local ou na internet, sendo q
 * IP/Host: Obrigatório. Exemplo: http://192.168.0.1, http://<nomedaempresa>.no-ip.org, http://www.nomedaempresa.com.br
 * Porta: Não obrigatório. Exemplo: 3030
 * Contexto: Obrigatório. Exemplo: ws
+
+Simulando um exemplo de uma sincronização local, o aplicativo <b>Representante Mobile</b> realizará as seguintes resuisições:
+
+> Envio dos pedidos
+* POST http://192.168.0.1:3030/ws
+* HEADER: Senha=teste
+* BODY: [ { ... }, ... ]
+
+> Atualização dos cadastros
+* GET http://192.168.0.1:3030/ws
+* HEADER: Senha=teste
