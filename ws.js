@@ -38,6 +38,31 @@ app.post('/ws', autenticacao, function (req, res) {
     	// TODO INSERIR EM UMA BASE DE DADOS
     
     	console.log(req.body);
+    	
+    	/*
+	[
+		{
+	      		"codigo":1,
+			"dataHora":"25/02/2015 12:57:39",
+			"identificadorCliente":"1",
+		  	"observacoes":"teste",
+		  	"identificadorCondicaoPagamento":"1",
+	      		"itens":
+	      			[
+	         			{     
+	            				"codigo":1,
+	            				"codigoPedido":1,
+						"identificadorProduto":"1",
+	            				"quantidade":1,
+						"unidade":"UN",
+	            				"valorUnitario":6.92,
+						"percentualDesconto":0,
+	            				"valorDescontoFLEX":0
+	         			}
+	      			]
+	   	}
+	]
+    	*/
 
 	res.status(200).send('OK');
 });
