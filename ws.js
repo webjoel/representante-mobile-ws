@@ -37,7 +37,7 @@ app.post('/ws', autenticacao, function (req, res) {
     
     // TODO INSERIR EM UMA BASE DE DADOS
     
-    console.log(req.body);
+    console.log(req.body); //
 
 	res.status(200).send('OK');
 });
