@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 
 function autenticacao(req, res, next) {
 
-	// VALIDA ACESSO
+    // VALIDA ACESSO
     
     // TODO CRIAR UMA SENHA
     
