@@ -1,2 +1,2 @@
 # representante-mobile-ws
-Exemplo de Web Service para sincronização com o aplicativo Representante Mobile 
+Exemplo de Web Service em Node.js para sincronização com o aplicativo Representante Mobile 
