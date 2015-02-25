@@ -1,7 +1,6 @@
 # representante-mobile-ws
-Exemplo de Web Service em Node.js para sincronização com o aplicativo <b>Representante Mobile</b> 
 
-Este exemplo tem como objetivo fornecer uma base para a criação de um Web Service para integração entre o <b>ERP</b> do cliente e o aplicativo <b>Representante Mobile</b>.
+Para a realização da sincronização de dados entre o <b>ERP</b> do cliente e o aplicativo <b>Representante Mobile</b> é necessário a criação de um Web Service por parte do cliente/software house.
 
 O Web Service deve ser criado em uma arquitetura de serviço <b>REST</b> utilizando o padrão <b>JSON</b> para formato de trasmissão de dados.
 
