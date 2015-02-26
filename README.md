@@ -61,7 +61,9 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 
 >> Observações:
 * Os campos "identificador..." são os mesmos do campo "identificador" do respectivo registro cadastral;
-* O campo "valorDescontoFLEX" deve ser utilizado pelo ERP para atualizar a disponibilização do campo "valor_saldo_flex" do registro de "parâmetros".
+* O campo "valorDescontoFLEX" deve ser utilizado pelo ERP para atualizar a disponibilização do campo "valor_saldo_flex" do registro de "parâmetros";
+* O campo "valorUnitario" já está com o desconto informado no campo "percentualDesconto";
+* O subtotal de cada item do pedido é: (quantidade * valorUnitario) - valorDescontoFLEX.
 
 > Cadastros:
 * {
