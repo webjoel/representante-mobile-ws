@@ -21,7 +21,7 @@ O Web Service pode ser disponibilizado em uma rede local ou na internet, sendo q
 * Porta: Não obrigatório. Exemplo: 3030
 * Contexto: Obrigatório. Exemplo: ws
 
-Simulando um exemplo de uma sincronização local, o aplicativo <b>Representante Mobile</b> realizará as seguintes requisições:
+Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws", o aplicativo <b>Representante Mobile</b> realizará as seguintes requisições:
 
 > Envio dos pedidos:
 * POST http://192.168.0.1:3030/ws
