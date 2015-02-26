@@ -111,7 +111,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
    }
 }
 
-> Observações:
+>> Observações:
 * Os campos "identificador" servem para identificar a chave primária do registro cadastral no ERP;
 * Valores decimais devem ser disponibilizados em vírgulas, apenas ponto (.);
 * Campos Boolean (verdadeiro ou falso), Sim e Não, etc, devem ser disponibilizados como "S" (sim) ou "N" (não);
