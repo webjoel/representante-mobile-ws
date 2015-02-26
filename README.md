@@ -124,4 +124,4 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 * Valores indisponíveis devem ser disponibilizados vazios ("") ou com zero (0), de acordo com o tipo do campo;
 * O campo "valor_saldo_flex" do registro de "parâmetros" deve ser controlado pelo ERP, atualizando e disponibilizando se assim o cliente desejar controlá-lo no aplicativo.
 
-Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (ws.js) desenvolvido na plataforma Node.js, utilizando os recursos e regras supracitados.
+Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (<b>ws.js</b>) desenvolvido na plataforma <b>Node.js</b>, utilizando os recursos e regras supracitados.
