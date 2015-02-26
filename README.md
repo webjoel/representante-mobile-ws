@@ -33,3 +33,81 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 * GET http://192.168.0.1:3030/ws
 * HEADER: Senha=teste
 * RESPONSE: { ... } ou Error ...
+
+Abaixo Segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
+
+> Pedidos(s):
+
+[
+   {
+      "codigo":1,
+	  "dataHora":"25/02/2015 12:57:39",
+	  "identificadorCliente":"1",
+	  "observacoes":"teste",
+	  "identificadorCondicaoPagamento":"1",
+      "itens":[
+         {     
+            "codigo":1,
+            "codigoPedido":1,
+			"identificadorProduto":"1",
+            "quantidade":1,
+			"unidade":"UN",
+            "valorUnitario":6.92,
+			"percentualDesconto":0,
+            "valorDescontoFLEX":0
+         }
+      ]
+   }
+]
+
+> Cadastros:
+{
+   "clientes":[
+      {
+         "identificador":"1",
+         "nome":"Cliente Teste",
+         "cnpj":"01.234.456/0001-23",
+         "telefone":"(00)0000-0000",
+         "contato":"Contato 1",
+         "email":"teste@teste.com",
+         "logradouro":"Rua Geral",
+         "numero":"1",
+         "bairro":"Centro",
+         "cidade":"Pequenópolis",
+         "estado":"DF",
+         "tipo":"Especial",
+         "limite":1000,
+         "venda":0,
+         "valor_titulos_vencidos":0,
+         "quantidade_titulos_vencidos":0
+      }
+   ],
+   "condicoes":[
+      {
+         "identificador":"1",
+         "descricao":"A VISTA",
+         "desconto_maximo":20
+      }
+   ],
+   "produtos":[
+      {
+         "identificador":"1",
+         "descricao":"Produto Teste",
+         "unidade":"UN",
+         "referencia":"001",
+         "fornecedor":"Fornecedor 1",
+         "quantidade_estoque":100,
+         "percentual_comissao":7,
+         "percentual_desconto":10,
+         "valor_minimo":6.23,
+         "valor_venda":6.92
+      }
+   ],
+   "parametros":{
+      "nome_empresa":"JOEL DA ROSA",
+      "controlar_limite_cliente":"S",
+      "controlar_desconto_cond_pagto":"N",
+      "controlar_estoque":"S",
+      "valor_saldo_flex":50.0
+   }
+}
