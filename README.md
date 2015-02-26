@@ -4,7 +4,7 @@ Para a realização da sincronização de dados entre o <b>ERP</b> do cliente e 
 
 O Web Service deve ser criado em uma arquitetura de serviço <b>REST</b> utilizando o padrão <b>JSON</b> para formato de transmissão de dados.
 
-Durante a sincronização o aplicativo "Representante Mobile" realizará um <b>POST</b> e um <b>GET</b>:
+Durante a sincronização o aplicativo <b>Representante Mobile</b> realizará um <b>POST</b> e um <b>GET</b>:
 
 > POST
 * Envio dos pedidos realizados no aplicativo para o ERP, caso sucesso, atualizará o status de sincronização do(s) pedido(s) no aplicativo.
