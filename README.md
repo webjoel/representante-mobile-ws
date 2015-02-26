@@ -40,19 +40,19 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 * [
    {
       "codigo":1,
-	  "dataHora":"25/02/2015 12:57:39",
-	  "identificadorCliente":"1",
-	  "observacoes":"teste",
-	  "identificadorCondicaoPagamento":"1",
+      "dataHora":"25/02/2015 12:57:39",
+      "identificadorCliente":"1",
+      "observacoes":"teste",
+      "identificadorCondicaoPagamento":"1",
       "itens":[
          {     
             "codigo":1,
             "codigoPedido":1,
-			"identificadorProduto":"1",
+	    "identificadorProduto":"1",
             "quantidade":1,
-			"unidade":"UN",
+	    "unidade":"UN",
             "valorUnitario":6.92,
-			"percentualDesconto":0,
+	    "percentualDesconto":0,
             "valorDescontoFLEX":0
          }
       ]
@@ -110,3 +110,6 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
       "valor_saldo_flex":50.0
    }
 }
+* Os campos "identificador" servem para identificar a chave primária do registro cadastral no ERP;
+* Valores decimais devem ser disponibilizados em vírgulas, apenas ponto (.);
+* Campos Boolean (verdadeiro ou falso), Sim e Não, etc, devem ser disponibilizados como "S" (sim) ou "N" (não);
