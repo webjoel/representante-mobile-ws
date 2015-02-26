@@ -109,11 +109,11 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
       }
    ],
    "parametros":{
-      "nome_empresa":"JOEL DA ROSA",
+      "nome_empresa":"EMPRESA TESTE",
       "controlar_limite_cliente":"S",
       "controlar_desconto_cond_pagto":"N",
       "controlar_estoque":"S",
-      "valor_saldo_flex":50.0
+      "valor_saldo_flex":0
    }
 }
 
