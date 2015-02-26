@@ -45,7 +45,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
       "observacoes":"teste",
       "identificadorCondicaoPagamento":"1",
       "itens":[
-         {     
+         {
             "codigo":1,
             "codigoPedido":1,
 	    "identificadorProduto":"1",
