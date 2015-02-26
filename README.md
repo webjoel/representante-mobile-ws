@@ -37,8 +37,7 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 Abaixo Segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
 
 > Pedidos(s):
-
-[
+* [
    {
       "codigo":1,
 	  "dataHora":"25/02/2015 12:57:39",
@@ -61,7 +60,7 @@ Abaixo Segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 ]
 
 > Cadastros:
-{
+* {
    "clientes":[
       {
          "identificador":"1",
