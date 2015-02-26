@@ -34,7 +34,7 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 * HEADER: Senha=teste
 * RESPONSE: { ... } ou Error ...
 
-Abaixo Segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
+Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
 
 > Pedidos(s):
 * [
