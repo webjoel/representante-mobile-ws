@@ -87,6 +87,11 @@ app.get('/ws', autenticacao, function (req, res) {
 	res.status(200).send(result);
 });
 
+app.get('/', function (req, res) {
+
+	res.status(200).send('<b>Exemplo de Web Service para sincronização com o aplicativo <a href="https://play.google.com/store/apps/details?id=br.com.blogspot.webjoel.representantemobile" target="_blank">Representante Mobile</a></b><br><br><u>Requisições disponíveis:<br><br><li>POST /ws</li><li>GET /ws</li></ul>');
+});
+
 app.listen(server_port, server_ip_address);
 
 console.log('WS rodando na porta ' + server_port + '...');
