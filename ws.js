@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3030
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+
 app.use(bodyParser.json());
 
 app.use(function (req, res, next) {
@@ -84,6 +87,6 @@ app.get('/ws', autenticacao, function (req, res) {
 	res.status(200).send(result);
 });
 
-app.listen(3030);
+app.listen(server_port, server_ip_address);
 
-console.log('WS rodando na porta 3030...');
+console.log('WS rodando na porta ' + server_port + '...');
