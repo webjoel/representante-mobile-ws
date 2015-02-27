@@ -82,7 +82,7 @@ app.get('/ws', autenticacao, function (req, res) {
                             + '{"identificador":"1","descricao":"A VISTA","desconto_maximo":20} ],'
                             + '"produtos" : ['
                             + '{"identificador":"1","descricao":"Produto Teste","unidade":"UN","referencia":"001","fornecedor":"Fornecedor 1","quantidade_estoque":100,"percentual_comissao":7,"percentual_desconto":10,"valor_minimo":6.23,"valor_venda":6.92} ],'
-                            + '"parametros" : {"nome_empresa":"JOEL DA ROSA","controlar_limite_cliente":"S","controlar_desconto_cond_pagto":"N","controlar_estoque":"S","valor_saldo_flex": 50.0} }');
+                            + '"parametros" : {"nome_empresa":"EMPRESA TESTE","controlar_limite_cliente":"S","controlar_desconto_cond_pagto":"N","controlar_estoque":"S","valor_saldo_flex": 50.0} }');
 
 	res.status(200).send(result);
 });
