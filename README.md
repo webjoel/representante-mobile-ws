@@ -127,4 +127,4 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 > Dicas:
 * Para controlar a sincronização de modo diferente para cada representante pode ser utilizado o número <b>MAC</b> do dispositivo, disponibilizado na tela inicial do aplicativo <b>Representante Mobile</b>.
 
-Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (<b>ws.js</b>) desenvolvido na linguagem JavaScript e disponibilizado na plataforma <b>Node.js</b>, utilizando os recursos e regras supracitados. Lembrando que o Web Service pode ser desenvolvido e disponibilizado em qualquer linguagem e plataforma que aceite a arquitetura <b>REST</b>.
+Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (<b>ws.js</b>) desenvolvido na linguagem JavaScript, disponibilizado na plataforma <b>Node.js</b> e hospedado no serviço Cloud <b>OpenShift</b> (http://representantemobilews-webjoel.rhcloud.com), utilizando os recursos e regras supracitados. Lembrando que o Web Service pode ser desenvolvido e disponibilizado em qualquer linguagem e plataforma que aceite a arquitetura <b>REST</b>.
