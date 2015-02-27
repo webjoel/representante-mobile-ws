@@ -84,6 +84,6 @@ app.get('/ws', autenticacao, function (req, res) {
 	res.status(200).send(result);
 });
 
-app.listen(80);
+app.listen(3030);
 
 console.log('WS rodando na porta 3030...');
