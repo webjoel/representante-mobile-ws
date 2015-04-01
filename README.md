@@ -67,7 +67,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 
 > Cadastros:
 * {
-   "clientes":[
+   "<b>clientes</b>":[
       {
          "identificador":"1",
          "nome":"Cliente Teste",
@@ -87,14 +87,14 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
          "quantidade_titulos_vencidos":0
       }
    ],
-   "condicoes":[
+   "<b>condicoes</b>":[
       {
          "identificador":"1",
          "descricao":"A VISTA",
          "desconto_maximo":20
       }
    ],
-   "produtos":[
+   "<b>produtos</b>":[
       {
          "identificador":"1",
          "descricao":"Produto Teste",
@@ -108,7 +108,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
          "valor_venda":6.92
       }
    ],
-   "parametros":{
+   "<b>parametros</b>":{
       "nome_empresa":"EMPRESA TESTE",
       "controlar_limite_cliente":"S",
       "controlar_desconto_cond_pagto":"N",
