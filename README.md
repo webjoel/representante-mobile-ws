@@ -126,5 +126,6 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 
 > Dicas:
 * Para controlar a sincronização de modo diferente para cada representante pode ser utilizado o número <b>MAC</b> do dispositivo, disponibilizado na tela inicial do aplicativo <b>Representante Mobile</b>. Sendo que no momento da atualização cadastral, será enviado o referido <b>MAC</b> junto a requisição.
+* A Senha (cadastrada na tela de Parâmetros) enviada na requisição pelo aplicativo <b>Representante Mobile</b> será codificada no padrão Base64, logo no servidor, deve-se realizar a decodificação da mesma para realizar a autenticação.
 
 Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (<b>ws.js</b>) desenvolvido na linguagem JavaScript, disponibilizado na plataforma <b>Node.js</b> e hospedado no serviço Cloud <b>OpenShift</b> (http://representantemobilews-webjoel.rhcloud.com), utilizando os recursos e regras supracitados. Lembrando que o Web Service pode ser desenvolvido e disponibilizado em qualquer linguagem e plataforma que aceite a arquitetura <b>REST</b>.
