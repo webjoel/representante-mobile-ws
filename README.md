@@ -30,7 +30,7 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 * RESPONSE: "OK" ou Error ...
 
 > Atualização dos cadastros:
-* GET http://192.168.0.1:3030/ws
+* GET http://192.168.0.1:3030/ws/<MAC DO DISPOSITIVO>
 * HEADER: Senha=teste
 * RESPONSE: { ... } ou Error ...
 
@@ -41,14 +41,14 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
    {
       "codigo":1,
       "dataHora":"25/02/2015 12:57:39",
-      "identificadorCliente":"1",
+      "codigoCliente":"1",
       "observacoes":"teste",
-      "identificadorCondicaoPagamento":"1",
+      "codigoCondicaoPagamento":"1",
       "itens":[
          {
             "codigo":1,
             "codigoPedido":1,
-	    "identificadorProduto":"1",
+	    "codigoProduto":"1",
             "quantidade":1,
 	    "unidade":"UN",
             "valorUnitario":6.92,
@@ -60,7 +60,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 ]
 
 >> Observações:
-* Os campos "identificador..." são os mesmos do campo "identificador" do respectivo registro cadastral;
+* Os campos "codigo<CADASTRO>" são os mesmos do campo "codigo" do respectivo registro cadastral;
 * O campo "valorDescontoFLEX" deve ser utilizado pelo ERP para atualizar a disponibilização do campo "valor_saldo_flex" do registro de "parâmetros";
 * O campo "valorUnitario" já está com o desconto informado no campo "percentualDesconto";
 * O subtotal de cada item do pedido é: (quantidade * valorUnitario) - valorDescontoFLEX.
@@ -69,7 +69,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 * {
    "<b>clientes</b>":[
       {
-         "identificador":"1",
+         "codigo":"1",
          "nome":"Cliente Teste",
          "cnpj":"01.234.456/0001-23",
          "telefone":"(00)0000-0000",
@@ -89,14 +89,14 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
    ],
    "<b>condicoes</b>":[
       {
-         "identificador":"1",
+         "codigo":"1",
          "descricao":"A VISTA",
          "desconto_maximo":20
       }
    ],
    "<b>produtos</b>":[
       {
-         "identificador":"1",
+         "codigo":"1",
          "descricao":"Produto Teste",
          "unidade":"UN",
          "referencia":"001",
@@ -118,13 +118,13 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 }
 
 >> Observações:
-* Os campos "identificador" servem para identificar a chave primária do registro cadastral no ERP;
+* Os campos "codigo" servem para identificar a chave primária do registro cadastral no ERP;
 * Valores decimais devem ser disponibilizados sem vírgulas, apenas ponto (.);
 * Campos Boolean (verdadeiro ou falso), Sim e Não, etc, devem ser disponibilizados como "S" (sim) ou "N" (não);
 * Valores indisponíveis devem ser disponibilizados vazios ("") ou com zero (0), de acordo com o tipo do campo;
 * O campo "valor_saldo_flex" do registro de "parâmetros" deve ser controlado pelo ERP, atualizando e disponibilizando se assim o cliente desejar controlá-lo no aplicativo.
 
 > Dicas:
-* Para controlar a sincronização de modo diferente para cada representante pode ser utilizado o número <b>MAC</b> do dispositivo, disponibilizado na tela inicial do aplicativo <b>Representante Mobile</b>.
+* Para controlar a sincronização de modo diferente para cada representante pode ser utilizado o número <b>MAC</b> do dispositivo, disponibilizado na tela inicial do aplicativo <b>Representante Mobile</b>. Sendo que no momento da atualização cadastral, será enviado o referido <b>MAC</b> junto a requisição.
 
 Para servir como base, foi disponibilizado nesta página um exemplo de um Web Service (<b>ws.js</b>) desenvolvido na linguagem JavaScript, disponibilizado na plataforma <b>Node.js</b> e hospedado no serviço Cloud <b>OpenShift</b> (http://representantemobilews-webjoel.rhcloud.com), utilizando os recursos e regras supracitados. Lembrando que o Web Service pode ser desenvolvido e disponibilizado em qualquer linguagem e plataforma que aceite a arquitetura <b>REST</b>.
