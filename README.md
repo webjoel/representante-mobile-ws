@@ -27,12 +27,12 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 * POST http://192.168.0.1:3030/ws
 * HEADER: Senha=teste
 * BODY: [ { ... }, ... ]
-* RESPONSE: "OK" ou Error ...
+* RESPONSE: { "mensagem":"OK" } ou { "mensagem":"<ERRO>" }
 
 > Atualização dos cadastros:
 * GET http://192.168.0.1:3030/ws/<MAC DO DISPOSITIVO>
 * HEADER: Senha=teste
-* RESPONSE: { ... } ou Error ...
+* RESPONSE: [ { <CADASTROS> }, ... ] ou { "mensagem":"<ERRO>" }
 
 Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
 
