@@ -67,7 +67,7 @@ app.post('/ws', autenticacao, function (req, res) {
 	]
     	*/
 
-	res.status(200).send('OK');
+	res.status(200).send(JSON.parse('{ "mensagem" : "OK" }'));
 });
 
 app.get('/ws/:mac', autenticacao, function (req, res) {
