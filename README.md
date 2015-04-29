@@ -27,12 +27,12 @@ Simulando um exemplo de uma sincronização local na porta "3030" e contexto "ws
 * POST http://192.168.0.1:3030/ws
 * HEADER: Senha=teste
 * BODY: [ { ... }, ... ]
-* RESPONSE: { "mensagem":"OK" } ou { "mensagem":"<ERRO>" }
+* RESPONSE: { "mensagem" : "OK" } ou { "mensagem" : "ERRO" }
 
 > Atualização dos cadastros:
-* GET http://192.168.0.1:3030/ws/<MAC DO DISPOSITIVO>
+* GET http://192.168.0.1:3030/ws/MAC_DO_DISPOSITIVO
 * HEADER: Senha=teste
-* RESPONSE: [ { <CADASTROS> }, ... ] ou { "mensagem":"<ERRO>" }
+* RESPONSE: [ { CADASTROS }, ... ] ou { "mensagem" : "ERRO" }
 
 Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização cadastral (<b>GET</b>):
 
@@ -60,7 +60,7 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 ]
 
 >> Observações:
-* Os campos "codigo<CADASTRO>" são os mesmos do campo "codigo" do respectivo registro cadastral;
+* Os campos "codigoCADASTRO" são os mesmos do campo "codigo" do respectivo registro cadastral;
 * O campo "valorDescontoFLEX" deve ser utilizado pelo ERP para atualizar a disponibilização do campo "valor_saldo_flex" do registro de "parâmetros";
 * O campo "valorUnitario" já está com o desconto informado no campo "percentualDesconto";
 * O subtotal de cada item do pedido é: (quantidade * valorUnitario) - valorDescontoFLEX.
