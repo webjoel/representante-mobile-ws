@@ -91,7 +91,8 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
       {
          "codigo":"1",
          "descricao":"A VISTA",
-         "desconto_maximo":20
+         "desconto_maximo":20,
+         "considera_limite":"S"
       }
    ],
    "<b>produtos</b>":[
