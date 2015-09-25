@@ -17,7 +17,7 @@ Em ambas as requisições (<b>POST</b> e <b>GET</b>) o aplicativo enviará no <b
 O Web Service pode ser disponibilizado em uma rede local ou na internet, sendo que os dados do mesmo devem ser configurados no cadastro de "Parâmetros" no aplicativo <b>Representante Mobile</b>.
 
 > Configuração do Web Service:
-* IP/Host: Obrigatório. Exemplo: http://192.168.0.1, http://nomedaempresa.no-ip.org, http://www.nomedaempresa.com.br
+* IP/Host: Obrigatório. Exemplo: 192.168.0.1, nomedaempresa.no-ip.org, www.nomedaempresa.com.br
 * Porta: Não obrigatório. Exemplo: 3030
 * Contexto: Obrigatório. Exemplo: ws
 
@@ -67,6 +67,14 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
 
 > Cadastros:
 * {
+   "<b>condicoes</b>":[
+      {
+         "codigo":"1",
+         "descricao":"A VISTA",
+         "desconto_maximo":20,
+         "considera_limite":"S"
+      }
+   ],
    "<b>clientes</b>":[
       {
          "codigo":"1",
@@ -84,15 +92,11 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
          "limite":1000,
          "venda":0,
          "valor_titulos_vencidos":0,
-         "quantidade_titulos_vencidos":0
-      }
-   ],
-   "<b>condicoes</b>":[
-      {
-         "codigo":"1",
-         "descricao":"A VISTA",
-         "desconto_maximo":20,
-         "considera_limite":"S"
+         "quantidade_titulos_vencidos":0,
+         "mac_dispositivo_vendedor":"00:00:00:00:00:00",
+         "codigo_condicao_pagamento":1,
+         "percentual_desconto":0,
+         "observacao_entrega":""
       }
    ],
    "<b>produtos</b>":[
@@ -114,7 +118,9 @@ Abaixo segue o exemplo da estrutura de pedidos (<b>POST</b>) e da atualização 
       "controlar_limite_cliente":"S",
       "controlar_desconto_cond_pagto":"N",
       "controlar_estoque":"S",
-      "valor_saldo_flex":0
+      "valor_saldo_flex":0,
+      "nome_vendedor":"VENDEDOR TESTE",
+      "mac_dispositivo_vendedor":"00:00:00:00:00:00"
    }
 }
 
